@@ -7,6 +7,7 @@ import GetRoomByRoomId from '../controllers/room/GetRoomByRoomId.js';
 import UpdateRoom from '../controllers/room/UpdateRoom.js';
 import upload from '../multerConfig.js';
 import DeleteRoom from '../controllers/room/DeleteRoom.js';
+import SearchRooms from '../controllers/room/SearchRooms.js';
 
 const router = Router()
 
@@ -16,5 +17,6 @@ router.get('/get_room_by_hotelid', GetRoomByHotelId)
 router.get('/get_room_by_roomId', GetRoomByRoomId)
 router.put('/update_room', upload.array('image', 10), UpdateRoom)
 router.put('/delete_room', DeleteRoom)
+router.get('/search_rooms', SearchRooms)
 
 export default router;
