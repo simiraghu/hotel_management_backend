@@ -5,7 +5,6 @@ import JWT from 'jsonwebtoken';
 const LoginUser = async (req, res) => {
     try {
         const { email, password } = req?.body;
-        console.log(email, "email")
 
         if (!email) {
             return res.status(400).json(
